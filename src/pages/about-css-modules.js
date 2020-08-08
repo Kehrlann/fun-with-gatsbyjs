@@ -1,8 +1,6 @@
 import React from "react"
-
-import Container from "../components/container"
+import Layout from "../components/layout"
 import styles from "./about-css-modules.module.css"
-import { graphql } from "gatsby"
 
 const User = props => (
   <div className={styles.user}>
@@ -14,10 +12,9 @@ const User = props => (
   </div>
 )
 
-export default function About({ data: { site: { siteMetadata }}}) {
+export default function About() {
   return (
-    <Container>
-      <h1>{siteMetadata.title}</h1>
+    <Layout>
       <p>CSS Modules are cool</p>
       <User
         username="Jane Doe"
@@ -29,16 +26,6 @@ export default function About({ data: { site: { siteMetadata }}}) {
         avatar="https://s3.amazonaws.com/uifaces/faces/twitter/vladarbatov/128.jpg"
         excerpt="I'm Bob Smith, a vertically aligned type of guy. Lorem ipsum dolor sit amet, consectetur adipisicing elit."
       />
-    </Container>
+    </Layout>
   )
 }
-
-export const query = graphql`
-query {
-  site {
-    siteMetadata {
-      title
-    }
-  }
-}
-`

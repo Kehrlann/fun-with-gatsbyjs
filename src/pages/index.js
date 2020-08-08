@@ -1,12 +1,12 @@
 import React from "react"
+import Layout from "../components/layout"
 
 export default function Home() {
   return (
-    <div style={{ color: `purple` }}>
-      <h1>Hello Gatsby!</h1>
+    <Layout>
       <p>What a world.</p>
       {/* highlight-next-line */}
       <img src="https://source.unsplash.com/random/400x200" alt="" />
-    </div>
+    </Layout>
   )
 }

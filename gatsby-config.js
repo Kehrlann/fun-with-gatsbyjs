@@ -8,6 +8,6 @@ module.exports = {
   /* Your site config here */
   plugins: [],
   siteMetadata: {
-    title: 'The Title Of The Site'
-  }
+    title: "Fun with gatsbyjs",
+  },
 }
